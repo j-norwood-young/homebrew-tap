@@ -6,7 +6,6 @@ class Clitorrents < Formula
   license "MIT"
 
   depends_on "node"
-  depends_on macos: :arm64
 
   on_macos do
     on_arm do
