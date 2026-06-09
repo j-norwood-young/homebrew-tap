@@ -20,11 +20,14 @@ class Clitorrents < Formula
 
   def install
     libexec.install "dist", "node_modules", "package.json"
-    rewrite_shebang detected_node_shebang, libexec/"dist/cli.js"
-    bin.install_symlink libexec/"dist/cli.js" => "clitorrents"
+    cli = libexec/"dist/cli.js"
+    rewrite_shebang detected_node_shebang, cli
+    chmod 0755, cli
+    bin.install_symlink cli => "clitorrents"
   end
 
   test do
+    assert_predicate bin/"clitorrents", :executable?
     assert_match "torrent search", shell_output("#{bin}/clitorrents help")
     assert_match "not running", shell_output("#{bin}/clitorrents status")
     node_addon = libexec/"node_modules/node-datachannel/build/Release/node_datachannel.node"
