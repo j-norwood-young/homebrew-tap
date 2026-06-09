@@ -11,7 +11,7 @@ class Clitorrents < Formula
   on_macos do
     on_arm do
       url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.4.2/clitorrents-0.4.2-darwin-arm64.tar.gz"
-      sha256 "PLACEHOLDER_ARM64"
+      sha256 "a3f6a9afbfb6121effabe74ad740b02eb49bb6fb918e26ea9147eb84be41e941"
     end
   end
 
