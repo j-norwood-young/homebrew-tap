@@ -6,15 +6,12 @@ class Clitorrents < Formula
   license "MIT"
 
   depends_on "node"
+  depends_on macos: :arm64
 
   on_macos do
     on_arm do
       url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.4.2/clitorrents-0.4.2-darwin-arm64.tar.gz"
       sha256 "PLACEHOLDER_ARM64"
-    end
-    on_intel do
-      url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.4.2/clitorrents-0.4.2-darwin-x64.tar.gz"
-      sha256 "PLACEHOLDER_X64"
     end
   end
 
