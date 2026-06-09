@@ -21,7 +21,7 @@ class Clitorrents < Formula
   def install
     libexec.install "dist", "node_modules", "package.json"
     rewrite_shebang detected_node_shebang, libexec/"dist/cli.js"
-    bin.install_symlink libexec/"dist/cli.js"
+    bin.install_symlink libexec/"dist/cli.js" => "clitorrents"
   end
 
   test do
