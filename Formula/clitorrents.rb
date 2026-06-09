@@ -1,8 +1,8 @@
 class Clitorrents < Formula
   desc "TUI torrent client"
   homepage "https://github.com/j-norwood-young/clitorrents"
-  url "https://registry.npmjs.org/clitorrents/-/clitorrents-0.4.0.tgz"
-  sha256 "803cbbed9caa35dae45687350e75e760871e9e029669788e3c2707dfb3141c12"
+  url "https://registry.npmjs.org/clitorrents/-/clitorrents-0.4.1.tgz"
+  sha256 "3e1f25ac91ad06700ec313e63601156d95039365a738f517b34eb65200048f05"
   license "MIT"
 
   depends_on "node"
