@@ -5,7 +5,7 @@ alwaysApply: true
 
 # homebrew-tap maintainer notes
 
-`README.md` is public-facing — install instructions and the formulae table only. Do not add release, bump, or setup docs there.
+`README.md` is public-facing — product overview, install instructions, demo media, and the formulae table. Do not add release, bump, or maintainer setup docs there (those live in this rule file).
 
 ## Bumping formulae
 
