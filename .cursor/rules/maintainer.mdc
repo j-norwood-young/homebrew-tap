@@ -1,0 +1,40 @@
+---
+description: Maintainer workflow for bumping formulae and releases
+alwaysApply: true
+---
+
+# homebrew-tap maintainer notes
+
+`README.md` is public-facing — install instructions and the formulae table only. Do not add release, bump, or setup docs there.
+
+## Bumping formulae
+
+Formula versions are bumped automatically when a new [clitorrents](https://github.com/j-norwood-young/clitorrents) GitHub release is published.
+
+Manual bump:
+
+```bash
+./scripts/bump-clitorrents.sh 0.4.1
+```
+
+## GitHub Actions secrets (clitorrents repo)
+
+| Secret | Purpose |
+|--------|---------|
+| `HOMEBREW_TAP_TOKEN` | Fine-grained PAT with **Contents: Read and write** on `homebrew-tap` |
+| `NPM_TOKEN` | npm automation token (tag-based release workflow) |
+
+## Release flow
+
+Pushing a version tag (e.g. `v0.4.1`) to **clitorrents** triggers:
+
+1. `release.yml` — tests, `npm publish`, GitHub release
+2. `homebrew.yml` — bumps `Formula/clitorrents.rb` in this tap
+
+`npm publish` alone does **not** bump the formula; the GitHub release event does.
+
+## Adding a new formula
+
+1. Add `Formula/<name>.rb` (prefer npm registry tarball URL + sha256).
+2. Add a row to the README formulae table.
+3. Wire automation in the source repo if it should auto-bump on release.
