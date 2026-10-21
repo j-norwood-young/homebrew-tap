@@ -9,12 +9,12 @@ class Clitorrents < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.5.1/clitorrents-0.5.1-darwin-arm64.tar.gz"
-      sha256 "8d5dc29c0e62074201ba2389dd5c2d1981eccb6e2a33fd2f03d48759396d8117"
+      url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.5.2/clitorrents-0.5.2-darwin-arm64.tar.gz"
+      sha256 "e2d5066f550dbe62542626c9ef37d72e4c56399aecef6ed33a9dfcf6fd8c2b99"
     end
     on_intel do
-      url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.5.1/clitorrents-0.5.1-darwin-x64.tar.gz"
-      sha256 "b0c6f0eb8c10a52832d270fb0507ee33b072b83007fb2b5a072f3c4f3f95e062"
+      url "https://github.com/j-norwood-young/clitorrents/releases/download/v0.5.2/clitorrents-0.5.2-darwin-x64.tar.gz"
+      sha256 "daa98aeededf769cea0d7adcbe98276566d225e0af273e4329736d633a8d8fa4"
     end
   end
 
